@@ -1,0 +1,47 @@
+{
+	"name": "ButtonProcessMessage",
+	"author": "Melvin",
+	"views": ["@Storefront", "@Plugins", "@ButtonProcessMessage"],
+	"style": [
+		"app/storefront/src/scss/overrides.scss",
+		"@Storefront",
+		"app/storefront/src/scss/base.scss"
+	],
+	"script": [
+		"@Storefront",
+		"app/storefront/dist/storefront/js/button-process-message.js"
+	],
+	"asset": ["@Storefront", "app/storefront/src/assets"],
+	"config": {
+		"blocks": {
+			"jsPlugins": {
+				"label": {
+					"en-GB": "JS Plugins",
+					"de-DE": "JS Plugins"
+				}
+			}
+		},
+		"fields": {
+			"ButtonProcessTextContent": {
+				"label": {
+					"en-GB": "Text content for add button",
+					"de-DE": "Text content für hinzufügen button"
+				},
+				"type": "text",
+				"value": "Wird in den Warenkorb gelegt",
+				"editable": true,
+				"block": "jsPlugins"
+			},
+			"ButtonProcessColor": {
+				"label": {
+					"en-GB": "Add to cart button transition color",
+					"de-DE": "Hinzufügen button Verarbeitungsfarbe"
+				},
+				"type": "color",
+				"value": "#595959",
+				"editable": true,
+				"block": "jsPlugins"
+			}
+		}
+	}
+}

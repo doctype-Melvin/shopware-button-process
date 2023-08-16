@@ -1,0 +1,21 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget-form.html.twig' %}
+
+{% set buttonProcessMessageOptions = {
+    buttonProcessTextContent: shopware.theme.buttonProcessTextContent,
+    buttonProcessColor: shopware.theme.buttonProcessColor
+}
+%}
+
+{% block buy_widget_buy_button %}
+    {{ parent() }}
+    <button
+    class="btn btn-buy"
+    data-button-process-message-options="{
+    "buttonProcessTextContent": "{{buttonProcessMessageOptions|json_encode}}",
+    "buttonProcessColor": "{{buttonProcessMessageOptions|json_encode}}",
+    }"
+    title="{{ "detail.addProduct"|trans|striptags }}"
+    aria-label="{{ "detail.addProduct"|trans|striptags }}">
+        {{ "detail.addProduct"|trans|sw_sanitize }}
+    </button>
+{% endblock %}
